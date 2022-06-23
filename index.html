@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Triệu Mẫu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 1918px;
+            background-image: url(images/bg-top.jpg), url(images/bg-bottom.jpg);
+            background-repeat: no-repeat no-repeat;
+            background-position: top left, bottom left;
+            background-color: #f2f2f2;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        .header-menu {
+            display: flex;
+            justify-content: center;
+            width: 1050px;
+            height: 510px;
+            margin: auto;
+            margin-top: 23px;
+            position: relative;
+            left: 25px;
+        }
+
+        .item-left,
+        .item-right {
+            width: 50%;
+        }
+
+        .item-left ul li,
+        .item-right ul li {
+            float: left;
+            margin-left: 20px;
+            list-style: none;
+            height: 20px;
+            padding-top: 3px;
+            margin-top: 10px;
+
+        }
+        .item-left ul li a:hover,
+        .item-right ul li a:hover{
+            opacity: 80%;
+        }
+        .item-left ul li a,
+        .item-right ul li a {
+            text-decoration: none;
+            color: #e5fafa;
+            font-size: 15px;
+        }
+
+        .item-left ul li {
+            border-right: solid 1px #6f7179;
+            padding-right: 20px;
+        }
+
+        .item-right ul li {
+            border-left: 1px solid #6f7179;
+            padding-left: 20px;
+        }
+
+        .item-left ul {
+            display: flex;
+            justify-content: start;
+        }
+
+        .item-right ul {
+            display: flex;
+            justify-content: end;
+            margin-right: 70px;
+        }
+
+        .header-banner {
+            width: 1000px;
+            height: 260px;
+            margin: auto;
+            display: flex;
+            background-color: #112141;
+        }
+
+        .header-banner-item1 {
+            width: 242px;
+            height: 260px;
+            padding: 2px;
+            margin-right: 5px;
+        }
+
+        .header-banner-item1 {
+            border: px solid #112141;
+        }
+
+        .dowload {
+            height: 126px;
+            background-image: url(images/btn_taigame.jpg);
+        }
+
+        .lantern {
+            position: relative;
+            position: absolute;
+            top: 509px;
+            left: -78px;
+        }
+
+        .registration {
+            height: 66px;
+            background-image: url(images/buttons-left.png);
+            background-position: 0 -1px;
+        }
+
+        .registration:hover {
+            background-position: -248px 0;
+        }
+
+        .add-card {
+            height: 65px;
+            background-image: url(images/buttons-left.png);
+            background-position: 0 -64px;
+        }
+
+        .add-card:hover {
+            background-position: -248px -64px;
+        }
+
+        .header-banner-item2 img {
+            width: 492px;
+            height: 259px;
+            margin: auto;
+        }
+
+        .header-banner-item3 {
+            width: 235px;
+            height: 255px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            row-gap: 10px;
+            column-gap: 10px;
+            margin: auto;
+            margin-top: 5px;
+
+        }
+
+        .header-banner-item3 img {
+            column-span: 3;
+        }
+
+        .button-1,
+        .button-2,
+        .button-3,
+        .button-4 {
+            width: 112px;
+            height: 104px;
+        }
+
+        .button-1 {
+            background-image: url(images/buttons-right.png);
+            background-position: 0 -10px;
+        }
+
+        .button-2 {
+            background-image: url(images/buttons-right.png);
+            background-position: -121px -10px;
+        }
+
+        .button-3 {
+            background-image: url(images/buttons-right.png);
+            background-position: 0px -120px;
+        }
+
+        .button-4 {
+            background-image: url(images/buttons-right.png);
+            background-position: -121px -120px;
+        }
+
+        .button-1:hover,
+        .button-2:hover,
+        .button-3:hover,
+        .button-4:hover {
+            opacity: 80%;
+        }
+
+        .footer-banner {
+            width: 1000px;
+            height: 777px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 741px 240px;
+            column-gap: 14px;
+        }
+
+        .content-top {
+            height: 110px;
+            display: flex;
+        }
+
+        .content-top button {
+            width: 335px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .content-top button+button {
+            margin-left: 5px;
+        }
+
+        .button1 {
+            background-image: url(images/cuuamlenh-vip-giftcode.png);
+            background-position: -2px 0;
+        }
+
+        .button1:hover {
+            opacity: 80%;
+        }
+
+        .button2 {
+            background-image: url(images/cuuamlenh-vip-giftcode.png);
+            background-position: -249px 0;
+        }
+
+        .button2:hover {
+            opacity: 80%;
+        }
+
+        .button3 {
+            background-image: url(images/cuuamlenh-vip-giftcode.png);
+            background-position: -500px 0;
+        }
+
+        .button3:hover {
+            opacity: 80%;
+        }
+
+
+
+        .menu {
+            height: 60px;
+            width: 740px;
+            border: 1px solid red;
+            background-image: url(images/news-header-bg.png);
+            position: relative;
+            right: 5px;
+            bottom: 6px;
+            border-left: 0.1px solid #1f3252;
+            border-bottom: 2px solid #1f3252;
+            border-right: 0.1px solid #1f3252;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .menu ul li a {
+            color: #c7a87a;
+            float: left;
+            text-decoration: none;
+        }
+
+        .menu ul li a:hover {
+            color: #e5fafa;
+        }
+
+        .menu ul li a {
+            padding-left: 41px;
+        }
+
+        .content-bottom {
+            height: 688px;
+            border: 6px solid #1f3252;
+            border-top: ;
+        }
+
+        .content-item-1,
+        .content-item-2,
+        .content-item-3 {
+            width: 655px;
+            height: 150px;
+            position: relative;
+            left: 18px;
+            display: grid;
+            grid-template-columns: 150px 490px;
+            column-gap: 20px;
+        }
+
+        .content-item-1 {
+            margin-top: 15px;
+        }
+
+        .content-item-2,
+        .content-item-3 {
+            margin-top: 28px;
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            border: 6px solid #c7a87a;
+        }
+
+        .image img {
+            width: 139px;
+            height: 139px;
+        }
+
+        .footer-banner-content-right {
+            width: 240px;
+            height: 310px;
+            background-color: #112141;
+            margin-top: 10px;
+        }
+
+        .footer-banner-content-right button {
+            width: 228px;
+            height: 52px;
+            margin-left: 6px;
+        }
+
+        #but-1 {
+            margin-top: 8px;
+            background-image: url(images/links-right.png);
+            background-position: -2px -5px;
+        }
+
+        #but-1:hover {
+            opacity: 80%;
+        }
+
+        #but-2 {
+            background-image: url(images/links-right.png);
+            background-position: -2px -60px;
+        }
+
+        #but-2:hover {
+            opacity: 80%;
+        }
+
+        #but-3 {
+            background-image: url(images/links-right.png);
+            background-position: -2px -120px;
+        }
+
+        #but-3:hover {
+            opacity: 80%;
+        }
+
+        #but-4 {
+            background-image: url(images/links-right.png);
+            background-position: -2px -180px;
+        }
+
+        #but-4:hover {
+            opacity: 80%;
+        }
+
+        #but-5 {
+            background-image: url(images/links-right.png);
+            background-position: -2px -227px;
+        }
+
+        #but-5:hover {
+            opacity: 80%;
+        }
+
+        .footer-banner-content-right button+button {
+            margin-top: 5px;
+        }
+        .main-content b{
+            color: #b70f0b;
+            margin-left: 10px;
+        }
+        #head-1{
+            height: 36px;
+            border-left: 6px solid #b70f0b;
+        }
+        #head-2,#head-3{
+            border-left: 6px solid #b70f0b;
+        }
+        #bot{
+            color: #696969;
+        }
+        #bot i{
+            opacity: 80%;
+        }
+        .more{
+            width: 178px;
+            height: 48px;
+            
+            position: absolute;
+            right: 753px;
+            top: 1490px;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 10px;
+        }
+        .more button{
+            width: 82px;
+            height: 47px;
+            margin: auto;
+            border: 3px solid #bfbfbf;
+            background-color: #1f3252;
+        }
+        .more button p{
+            color: #6f7179;
+        }
+        .more button:hover{
+            opacity: 80%;
+        }
+        .footer{
+            width: 900px;
+            height: 157px;
+            margin: auto;
+            margin-top: 500px;
+            display: grid;
+            grid-template-columns: 137px 700px;
+            column-gap: 70px;
+            position: relative;
+            right: 80px;
+            margin-bottom: -50px;
+        }
+       .footer-content p{
+        margin: auto;
+        font-size: 0.9em;
+        text-align: center;
+        margin-top: 10px;
+        opacity: 70%;
+       }
+    </style>
+</header>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <div class="header-menu">
+            <div class="item-left">
+                <ul>
+                    <li style="text-decoration: none;"><a href="">Tin tức</a></li>
+                    <li><a href="">Giới thiệu </a></li>
+                    <li><a href="">Hướng dẫn </a></li>
+                    <li><a href="">Download</a></li>
+                </ul>
+            </div>
+            <div class="item-right">
+                <ul>
+                    <li><a href="">Đặc sắc</a></li>
+                    <li><a href="">Thư viện</a></li>
+                    <li><a href="">Hỗ trợ</a></li>
+                    <li><a href="">Cộng đồng</a></li>
+                </ul>
+            </div>
+            <div class="lantern">
+                <img src="images/long-den.png" alt="">
+            </div>
+        </div>
+
+        <!--Header-->
+        <!--Banner-->
+
+        <div class="header-banner">
+            <div class="header-banner-item1">
+                <div class="dowload">
+                    <button></button>
+                </div>
+                <div class="registration">
+                    <button></button>
+                </div>
+                <div class="add-card">
+                    <button></button>
+                </div>
+            </div>
+            <div class="header-banner-item2">
+                <img src="images/slider-01.gif" alt="">
+            </div>
+            <div class="header-banner-item3">
+                <button class="button-1"></button>
+                <button class="button-2"></button>
+                <button class="button-3"></button>
+                <button class="button-4"></button>
+                <img src="images/hotline.png" alt="">
+            </div>
+        </div>
+
+        <div class="footer-banner">
+            <div class="footer-banner-content-left">
+                <div class="content-top">
+                    <button class="button1"></button>
+                    <button class="button2"></button>
+                    <button class="button3"></button>
+                </div>
+                <div class="content-bottom">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="">Tin mới </a></li>
+                            <li><a href="">Thông báo </a></li>
+                            <li><a href="">Sự kiện </a></li>
+                            <li><a href="">Cộng đồng </a></li>
+                            <li><a href="">Báo chí</a></li>
+                            <li><a href="">Hướng dẫn </a></li>
+                        </ul>
+                    </div>
+                    <div class="main-content">
+                        <div class="content-item-1">
+                            <div class="image">
+                                <img src="images/news-dang-nhap.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div id="head-1">
+                                    <b>23H59 NGÀY 17/03/2022, KẾT THÚC SỰ KIỆN</b>
+                                    <br>
+                                    <b>ĐĂNG NHẬP NHẬN QUÀ</b>
+                                </div>
+                                <div id="bot">
+                                    <i>Ngày đăng 16-03-2022</i>
+                                    <br>
+                                    <p>chỉ cần đăng nhập vào Cửu Âm Chân Kinh cũng nhận được những phần quà cực hấp dẫn.
+                                        Tham gia ngay !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item-2">
+                            <div class="image">
+                                <img src="images/news-su-kien.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div id="head-2">
+                                    <b>HÀNH TẨU GIANG HỒ, NHẬN QUÀ CỰC ĐÃ</b>
+                                </div>
+                                <div id="bot">
+                                    <i>Ngày đăng: 14-03-2022</i>
+                                    <br>
+                                    <p>Trong thời gian diễn ra sự kiện, mỗi ngày đến Tô Châu (423.794) gặp NPC
+                                        Ninh Cửu Vi (Giang Hồ Khách) để nhận các nhiện vụ thu thập các Lệnh Bài
+                                        Hạ Nhật.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item-3">
+                            <div class="image">
+                                <img src="images/news-event-thang3.png" alt="">
+                            </div>
+                            <div class="content">
+                                <div id="head-3">
+                                    <b>CHUỖI SỰ KIỆN THÁNG 03.2022</b>
+                                </div>
+                                <div id="bot">
+                                    <i>Ngày đăng: 09-03-2022</i>
+                                    <br>
+                                    <p>Chào tháng 03, chắc chắn không thể thiều một loạt sự kiện hấp dẫn đi kèm.
+                                        Cùng khám phá nhé!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more">
+                        <button><p>LÊN TRÊN</p></button>
+                        <button><P>XEM THÊM</P></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-banner-content-right">
+                <button id="but-1"></button>
+                <button id="but-2"></button>
+                <button id="but-3"></button>
+                <button id="but-4"></button>
+                <button id="but-5"></button>
+            </div>
+        </div>
+        <!--Banner-->
+        <!--Footer-->
+
+        <!--Footer-->
+       <div class="footer">
+           <div class="logo">
+               <img src="images/gosu-logo.png" alt="">
+           </div>
+           <div class="footer-content">
+               <p style="margin: auto;">Hỗ Trợ | Cài Đặt | Điều Khoản</p>
+               <p>Giấy phép số 2474/QĐ-BTTTT cấp ngày 29/12/2015</p>
+               <p>Công ty cổ phần trực tuyến GOSU</p>
+               <p>Địa chỉ: Tầng 6, Toà nhà VietinBank, 01 Lê Quý Đôn, thành phố Huế, tình Thừa Thiên Huế, Việt Nam</p>
+           </div>
+       </div>
+        <!--Footer-->
+    </div>
+</body>
+
+</html>
